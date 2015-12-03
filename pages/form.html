@@ -1,0 +1,53 @@
+<aside>
+        <ul class="progress">
+                <li>
+                        <a ui-sref-active="active" ui-sref=".step1" class="step step-1 inactive">
+                                <div class="step-number">1</div>
+                                <h3 class="step-heading">Dimensions &amp; Quantity</h3>
+                                <dl>
+                                    <dt>Width:</dt>
+                                    <dd><span ng-if = "formData.width">{{ formData.width }}</span><span ng-if = "!formData.width">0.0</span>cm</dd>
+                                    <dt>Height:</dt>
+                                    <dd><span ng-if = "formData.height">{{ formData.height }}</span><span ng-if = "!formData.height">0.0</span>cm</dd>
+                                    <dt>Length:</dt>
+                                    <dd><span ng-if = "formData.length">{{ formData.length }}</span><span ng-if = "!formData.length">0.0</span>cm</dd>
+                                    <dt>Quantity:</dt>
+                                    <dd><span ng-if = "formData.quantity">{{ formData.quantity }}</span><span ng-if = "!formData.quantity">0</span></dd>
+                                </dl>
+                        </a>
+                </li>
+                <li>
+                        <a  ui-sref-active="active" ui-sref=".step2" class="step step-2 inactive" >
+                                <div class="step-number">2</div>
+                                <h3 class="step-heading">Cardboard Grade</h3>
+                                <span class="step-value"><span ng-if = "formData.cardboardGrade">{{ formData.cardboardGrade }}</span><span ng-if = "!formData.cardboardGrade">nothing chosen</span></span>
+                        </a>
+                </li>
+                <li>
+                        <a   ui-sref-active="active" ui-sref=".step3" class="step step-3 inactive">
+                                <div class="step-number">3</div>
+                                <h3 class="step-heading">Print Quality</h3>
+                                <span class="step-value"><span ng-if = "formData.printQuality">{{ formData.printQuality }}</span><span ng-if = "!formData.printQuality">nothing chosen</span></span>
+                        </a>
+                </li>
+                <li>
+                        <a   ui-sref-active="active" ui-sref=".step4" class="step step-4 inactive">
+                                <div class="step-number">4</div>
+                                <h3 class="step-heading">Optional Extras</h3>
+                                <span class="step-value"><span ng-if = "formData.optional.value1">Handles</span><br />
+                                                         <span ng-if = "formData.optional.value2">Reinforced bottom</span>
+                                                         <span ng-if = "!formData.optional">nothing chosen</span></span>
+                        </a>
+                </li>
+                <li>
+                        <a  ui-sref-active="active" ui-sref=".total" class="step step-total-cost inactive">
+                                <h3 class="step-total-cost-heading">Total Cost</h3>
+                                <div class="step-total-cost-value">&pound;{{ total | number : 2}}</div>
+                        </a>
+                </li>
+        </ul>
+</aside>
+
+<section >
+        <div id="form-views" ui-view></div>       
+</section>

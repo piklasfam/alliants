@@ -1,0 +1,45 @@
+<div id="step-2" class="content-step">
+        <h2>Step 2 - Cardboard Grade</h2>
+
+        <p class="intro">
+            <strong>FantasticBoxCo</strong> offer a variety of grades of cardboard, each altering the price per m<sup>2</sup>:
+​     </p>
+        <form name = "step2Form"  novalidate>
+        <ol class="btn-radios-list">
+            <li>
+                <label>
+                    <input type="radio" name="cardboard-grade" value="A" ng-model="formData.cardboardGrade" required>
+                    <span class="btn btn-radio">
+                        A Grade<br>&pound;0.20 m<sup>2</sup>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="cardboard-grade" value="B" ng-model="formData.cardboardGrade" required>
+                    <span class="btn btn-radio">
+                        B Grade<br>&pound;0.10 m<sup>2</sup>
+                    </span>
+                </label>
+            </li>
+            <li ng-show = "gradeCAvailable();">
+                <label >
+                    <input type="radio" name="cardboard-grade" value="C" ng-model="formData.cardboardGrade" required>
+                    <span class="btn btn-radio">
+                        C Grade<br>&pound;0.05 m<sup>2</sup>
+                    </span>
+                </label>
+            </li>
+        </ol>
+
+        <div class="form-actions">
+            <button type="button" class="btn btn-back" ui-sref="form.step1">
+              back
+            </buttton>
+            <button type="button" class="btn btn-primary btn-next" ui-sref="form.step3" 
+                    ng-disabled="step2Form.$invalid" >
+              Next
+            </buttton>
+        </div>
+        </form>
+</div>

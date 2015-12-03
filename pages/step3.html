@@ -1,0 +1,63 @@
+<div id="step-3" class="content-step">
+        <h2>Step 3 - Print Quality</h2>
+
+        <p class="intro">
+            A variety of printing options are available for any branding / logos which are required:
+        </p>
+        <form name = "step3Form">
+        <ol class="btn-radios-list">
+            <li>
+              <label>
+                <input type="radio" name="print-quality" value="3-color" ng-model="formData.printQuality" required>
+                <span class="btn btn-radio">
+                  3 colours<br>&pound;0.20 m<sup>2</sup>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="print-quality" value="2-color" ng-model="formData.printQuality" required>
+                <span class="btn btn-radio">
+                  2 colours<br>&pound;0.10 m<sup>2</sup>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="print-quality" value="black-only" ng-model="formData.printQuality" required>
+                <span class="btn btn-radio">
+                  Black only<br>&pound;0.05 m<sup>2</sup>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="print-quality" value="no-printing" ng-model="formData.printQuality" required>
+                <span class="btn btn-radio">
+                  No printing<br>&pound;0.00
+                </span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="print-quality" value="FantasticBoxCo-branding" ng-model="formData.printQuality" required>
+                <span class="btn btn-radio">
+                  <strong>FantasticBoxCo</strong> branding<br>5% discount on total price
+                </span>
+              </label>
+            </li>
+        </ol>
+
+        <div class="form-actions">
+            <button type="button" class="btn btn-back" ui-sref="form.step2">
+              back
+            </buttton>
+            <button type="button" class="btn btn-primary btn-next" ui-sref="form.step4" 
+                    ng-disabled="step3Form.$invalid" >
+              Next
+            </buttton>
+        </div>
+</div>
+
+
+        

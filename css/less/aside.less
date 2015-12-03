@@ -1,0 +1,28 @@
+@import 'variables.less';
+
+aside{
+        .progress {
+                height: auto;
+                a {
+                        text-decoration: none;      
+                }
+                .inactive {
+                        pointer-events: none;
+                        cursor: default;
+                }
+                
+        }
+        .active {
+                margin-right:-22px;
+                padding-right:32px;
+                background-color:#fff;
+                border-right:none;
+                border-top-right-radius:0;
+                border-bottom-right-radius:0;
+        }
+        
+        .step-total-cost.active {
+                background-color: crimson;
+            } 
+        
+}

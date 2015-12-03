@@ -1,0 +1,38 @@
+<div id = "step-1" class = "content-step">
+    <form name = "step1Form"  role="form" novalidate >
+        <h2>Step 1 - Dimensions &amp; Quantity</h2>
+
+        <p class = "intro">
+                Enter the width, height, length and quantity of the box(es) you require.
+        </p>
+
+        <div class = "form-row" >
+                <label for = "width">Width:</label>
+                <input type = "number" name="width" id="width" 
+                       ng-model="formData.width" required />
+        </div>
+
+        <div class="form-row">
+                <label for="height">Height:</label>
+                <input type="number" name="height" id="height" 
+                       ng-model="formData.height" required>
+        </div>
+
+        <div class="form-row">
+                <label for="length">Length:</label>
+                <input type="number" name="length" id="length" 
+                       ng-model="formData.length" required>
+        </div>
+
+        <div class="form-row">
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" id="quantity" 
+                       ng-model="formData.quantity" required>
+        </div>
+        
+        <div class="form-actions">
+                <button type="button" class="btn btn-primary btn-next" 
+                        ui-sref="form.step2"  ng-disabled="step1Form.$invalid" >Next </buttton>
+        </div>
+    </form>
+</div>

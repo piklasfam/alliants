@@ -1,0 +1,31 @@
+<div id="total-cost" class="content-step">
+        <h2>Total Cost</h2>
+
+        <dl class="breakdown">
+            <dt>Dimensions &amp; Quantity:</dt>
+            <dd>{{ formData.quantity }} &times; {{ formData.width }}(W)&times;{{ formData.height }}(H)&times;{{ formData.length }}(L)</dd>
+
+            <dt>Cardboard Grade:</dt>
+            <dd>{{ formData.cardboardGrade }} - &pound;{{ cardboardGradePrice }} for m<sup>2</sup> </dd>
+
+            <dt>Print Quality:</dt>
+            <dd>{{ formData.printQuality }} - &pound; <span ng-if = "printingPrice" >{{ printingPrice }} for m<sup>2</sup></span>
+                <span ng-if = "printingPriceDiscount" >{{printingPriceDiscount}}</span></dd>
+            <dt>Optional Extras:</dt>
+            <dd>
+              <ol>
+                <li ng-show = "formData.optional.value1 == true">Handles - &pound;0.10 &times; {{ formData.quantity }}</li>
+                <li ng-show = "formData.optional.value2 == true">Reinforce bottoms - &pound;0.05 &times; {{ formData.quantity }} </li>
+              </ol>
+            </dd>
+
+            <dt>Total Cost:</dt>
+            <dd>&pound; {{ total | number : 2}}</dd>
+        </dl>
+        
+        <div class="form-actions">
+            <button type="button" class="btn btn-back" ui-sref="form.step1">
+              back to Step1
+            </buttton>
+        </div>
+</div>
