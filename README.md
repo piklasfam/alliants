@@ -6,7 +6,8 @@
 </ul>
 <h3 id = "setup">Set up</h3>
 <ol>
-    <li>I have used gulp, angularjs and less, and bootstrap for basic css. less files are already compiled into one css file, so it is not needed to install anything</li>   
+    <li>I have used gulp, angularjs and less, and bootstrap for basic css. less files are already compiled into one css file, so it is not needed to install anything</li>  
+    <li>Put this directory in you localhost folder to see results</li>   
 </ol>
 <h3 id = "files">File Structure</h3>
 <ul>

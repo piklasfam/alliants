@@ -1,7 +1,7 @@
 (function() {
         'use strict';
         angular.module('app.controllers', [])
-        .controller('AppCtrl', ['$scope', function($scope) {console.log('here');
+        .controller('AppCtrl', ['$scope', function($scope) {
                 $scope.formData = {};
                 $scope.total = 0.00;
          
